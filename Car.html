@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarHub // Premium EV Intelligence & Automotive Hub</title>
+  <meta name="description" content="Explore in-depth specifications, real-world EV range estimators, and side-by-side comparisons of top electric vehicles on CarHub." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0284c7',
+              700: '#0369a1',
+              900: '#0c4a6e',
+              accent: '#38bdf8'
+            }
+          }
+        }
+      }
+    }
+         
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+  
+ <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+ <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col justify-between">
+ <script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 'q6lbjancqd',
+    });
+</script>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-2 font-bold text-xl tracking-wider text-white">
+          <div class="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center text-slate-950 shadow-lg shadow-sky-500/30">
+            <i data-lucide="zap" class="w-5 h-5 stroke-[2.5]"></i>
+          </div>
+          <span>CAR<span class="text-sky-400">HUB</span></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#models" class="hover:text-sky-400 transition-colors">EV Lineup</a>
+          <a href="#range-calc" class="hover:text-sky-400 transition-colors">Range Calculator</a>
+          <a href="#specs" class="hover:text-sky-400 transition-colors">Spec Comparison</a>
+          <a href="#insights" class="hover:text-sky-400 transition-colors">Tech Insights</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a href="#models" class="hidden sm:inline-flex px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-950 bg-sky-400 hover:bg-sky-300 rounded-lg transition-colors">
+            Explore Models
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 md:py-28 overflow-hidden border-b border-slate-800/60">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=2000&q=80" alt="Electric Vehicle Performance" class="w-full h-full object-cover opacity-20 filter blur-sm scale-105" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Independent Automotive Research Platform
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        Next-Generation Electric Mobility & In-Depth EV Intelligence
+      </h1>
+      <p class="mt-6 text-lg text-slate-300 max-w-2xl mx-auto">
+        Comprehensive performance data, battery analysis, and real-world efficiency calculators for modern electric vehicles on CarHub.
+      </p>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="#models" class="px-6 py-3 text-sm font-semibold text-slate-950 bg-sky-400 hover:bg-sky-300 rounded-xl transition-all shadow-lg shadow-sky-400/20">
+          Browse Vehicles
+        </a>
+        <a href="#range-calc" class="px-6 py-3 text-sm font-semibold text-slate-200 bg-slate-800/80 hover:bg-slate-700 rounded-xl border border-slate-700 transition-all">
+          Calculate Range
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Showcase Section -->
+  <section id="models" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-white tracking-tight">Featured Electric Vehicles</h2>
+      <p class="text-slate-400 mt-2">Detailed technical breakdown of leading performance models</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Model 1: BYD Seal -->
+      <div class="glass-card rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="BYD Seal" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 right-3 bg-slate-900/80 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-700">Sedan</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-white">BYD Seal</h3>
+            <p class="text-xs text-slate-400 mt-1">Ocean Aesthetics Design Platform</p>
+            
+            <div class="mt-4 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Range (WLTP)</span>
+                <span class="font-semibold text-slate-100">570 km</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">0-100 km/h</span>
+                <span class="font-semibold text-sky-400">3.8s</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Battery</span>
+                <span class="font-semibold text-slate-100">82.5 kWh</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Fast Charge</span>
+                <span class="font-semibold text-slate-100">150 kW</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#specs" class="w-full inline-flex items-center justify-center gap-2 py-2.5 text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors">
+            View Specifications <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Model 2: BYD Sealion 7 -->
+      <div class="glass-card rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80" alt="BYD Sealion 7" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 right-3 bg-slate-900/80 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-700">Performance SUV</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-white">BYD Sealion 7</h3>
+            <p class="text-xs text-slate-400 mt-1">High-Performance Electric SUV</p>
+            
+            <div class="mt-4 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Range (WLTP)</span>
+                <span class="font-semibold text-slate-100">502 km</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">0-100 km/h</span>
+                <span class="font-semibold text-sky-400">4.5s</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Battery</span>
+                <span class="font-semibold text-slate-100">91.3 kWh</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Fast Charge</span>
+                <span class="font-semibold text-slate-100">230 kW</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#specs" class="w-full inline-flex items-center justify-center gap-2 py-2.5 text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors">
+            View Specifications <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Model 3: BYD Dolphin -->
+      <div class="glass-card rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="BYD Dolphin" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 right-3 bg-slate-900/80 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-700">Urban Hatchback</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-white">BYD Dolphin</h3>
+            <p class="text-xs text-slate-400 mt-1">Agile Urban Commuter</p>
+            
+            <div class="mt-4 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Range (WLTP)</span>
+                <span class="font-semibold text-slate-100">427 km</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">0-100 km/h</span>
+                <span class="font-semibold text-sky-400">7.0s</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Battery</span>
+                <span class="font-semibold text-slate-100">60.4 kWh</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Fast Charge</span>
+                <span class="font-semibold text-slate-100">88 kW</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#specs" class="w-full inline-flex items-center justify-center gap-2 py-2.5 text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors">
+            View Specifications <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Model 4: BYD Atto 3 -->
+      <div class="glass-card rounded-2xl overflow-hidden hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="BYD Atto 3" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 right-3 bg-slate-900/80 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-700">Compact Crossover</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-white">BYD Atto 3</h3>
+            <p class="text-xs text-slate-400 mt-1">Versatile Family Crossover</p>
+            
+            <div class="mt-4 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Range (WLTP)</span>
+                <span class="font-semibold text-slate-100">420 km</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">0-100 km/h</span>
+                <span class="font-semibold text-sky-400">7.3s</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Battery</span>
+                <span class="font-semibold text-slate-100">60.4 kWh</span>
+              </div>
+              <div class="bg-slate-800/50 p-2.5 rounded-lg">
+                <span class="text-slate-400 block">Fast Charge</span>
+                <span class="font-semibold text-slate-100">88 kW</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#specs" class="w-full inline-flex items-center justify-center gap-2 py-2.5 text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors">
+            View Specifications <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Range Estimator Tool -->
+  <section id="range-calc" class="py-16 bg-slate-900/50 border-y border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-white">Real-World EV Range Estimator</h2>
+        <p class="text-slate-400 mt-2">Adjust driving conditions to project estimated battery autonomy</p>
+      </div>
+
+      <div class="glass-card p-6 sm:p-8 rounded-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Controls -->
+          <div class="space-y-6">
+            <div>
+              <label class="text-sm font-semibold text-slate-300 flex justify-between">
+                <span>Selected Vehicle</span>
+              </label>
+              <select id="model-select" class="mt-2 w-full bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg p-3 focus:outline-none focus:border-sky-500">
+                <option value="seal">BYD Seal (82.5 kWh)</option>
+                <option value="sealion">BYD Sealion 7 (91.3 kWh)</option>
+                <option value="dolphin">BYD Dolphin (60.4 kWh)</option>
+                <option value="atto">BYD Atto 3 (60.4 kWh)</option>
+              </select>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm font-semibold text-slate-300 mb-2">
+                <span>Average Speed</span>
+                <span id="speed-val" class="text-sky-400 font-bold">100 km/h</span>
+              </div>
+              <input type="range" id="speed-range" min="40" max="140" value="100" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-400" />
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm font-semibold text-slate-300 mb-2">
+                <span>Outside Temperature</span>
+                <span id="temp-val" class="text-sky-400 font-bold">22°C</span>
+              </div>
+              <input type="range" id="temp-range" min="-10" max="40" value="22" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-400" />
+            </div>
+          </div>
+
+          <!-- Result Display -->
+          <div class="flex flex-col justify-center items-center bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 text-center">
+            <i data-lucide="battery-charging" class="w-12 h-12 text-sky-400 mb-3"></i>
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Estimated Real-World Range</span>
+            <div class="text-5xl font-extrabold text-white my-3"><span id="estimated-km">520</span> <span class="text-2xl text-sky-400 font-bold">km</span></div>
+            <p class="text-xs text-slate-400 max-w-xs">
+              Based on thermodynamic battery efficiency and aerodynamic load modeling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Insights Articles -->
+  <section id="insights" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-white">CarHub Engineering Insights</h2>
+      <p class="text-slate-400 mt-2">In-depth technical analysis on electric powertrain advancements</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Battery Architecture</span>
+          <h3 class="text-lg font-bold text-white mt-2">Blade Battery Safety & Structural Cell-to-Body Integration</h3>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            Exploring how Lithium Iron Phosphate (LFP) structural cell integration enhances torsional rigidity while eliminating thermal runaway risks in modern EV chassis platforms.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-500 flex items-center justify-between">
+          <span>5 min read</span>
+          <span class="text-sky-400 font-semibold flex items-center gap-1">Read Article <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+        </div>
+      </article>
+
+      <article class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Thermal Dynamics</span>
+          <h3 class="text-lg font-bold text-white mt-2">800V Architecture & Ultra-Fast Charging Performance</h3>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            How silicon carbide (SiC) inverters and optimized liquid cooling channels enable sustained high-power DC fast charging without degrading battery health.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-500 flex items-center justify-between">
+          <span>7 min read</span>
+          <span class="text-sky-400 font-semibold flex items-center gap-1">Read Article <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+        </div>
+      </article>
+
+      <article class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Aerodynamics</span>
+          <h3 class="text-lg font-bold text-white mt-2">Optimizing Drag Coefficients ($C_d$) for Long-Range EV Travel</h3>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            Analyzing aerodynamic door handles, active air shutters, and underbody diffusers designed to maximize motorway energy efficiency.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-500 flex items-center justify-between">
+          <span>4 min read</span>
+          <span class="text-sky-400 font-semibold flex items-center gap-1">Read Article <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 border-t border-slate-800 py-10 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2 font-bold text-lg text-white">
+        <div class="w-6 h-6 rounded bg-sky-500 flex items-center justify-center text-slate-950">
+          <i data-lucide="zap" class="w-4 h-4 stroke-[2.5]"></i>
+        </div>
+        <span>CAR<span class="text-sky-400">HUB</span></span>
+      </div>
+
+      <p class="text-xs text-slate-500 text-center">
+        © 2026 CarHub Automotive Research. Independent EV specifications and analytics portal.
+      </p>
+
+      <div class="flex items-center gap-6 text-xs text-slate-400">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Range Calculations and Icons -->
+  <script>
+    lucide.createIcons();
+
+    const baseRanges = {
+      seal: 570,
+      sealion: 502,
+      dolphin: 427,
+      atto: 420
+    };
+
+    const modelSelect = document.getElementById('model-select');
+    const speedRange = document.getElementById('speed-range');
+    const tempRange = document.getElementById('temp-range');
+    const speedVal = document.getElementById('speed-val');
+    const tempVal = document.getElementById('temp-val');
+    const estimatedKm = document.getElementById('estimated-km');
+
+    function calculateRange() {
+      const model = modelSelect.value;
+      const speed = parseInt(speedRange.value);
+      const temp = parseInt(tempRange.value);
+
+      speedVal.textContent = `${speed} km/h`;
+      tempVal.textContent = `${temp}°C`;
+
+      const base = baseRanges[model];
+      
+      // Speed impact modeling
+      let speedFactor = 1.0 - ((speed - 90) * 0.006);
+      
+      // Temperature impact modeling
+      let tempFactor = 1.0;
+      if (temp < 20) {
+        tempFactor -= (20 - temp) * 0.008;
+      } else if (temp > 30) {
+        tempFactor -= (temp - 30) * 0.004;
+      }
+
+      const calculated = Math.round(base * speedFactor * tempFactor);
+      estimatedKm.textContent = Math.max(150, calculated);
+    }
+
+    modelSelect.addEventListener('change', calculateRange);
+    speedRange.addEventListener('input', calculateRange);
+    tempRange.addEventListener('input', calculateRange);
+  </script>
+</body>
+</html>
